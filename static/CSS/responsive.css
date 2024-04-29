@@ -1,0 +1,37 @@
+@media  screen and (max-width:750px) {
+    #nav {
+        height: auto;
+        padding: 1rem;
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        gap: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    #nav .menu{
+        padding: 1rem;
+    }
+
+    .mainContainer{
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1rem;
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.284), rgba(255, 255, 255, 0));
+    }
+    .leftContent{
+        padding-left: 0;
+    }
+    .leftContent .name h1 {
+        font-size: 12.5vw;
+    }
+    .leftContent .logo h1 {
+        font-family: "Poppins", sans-serif;
+    }
+    .rightContent{
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

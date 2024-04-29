@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body .bg{
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    object-fit: cover;
+
+}
+
+#nav {
+    height: 5rem;
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 999;
+    backdrop-filter: blur(1px);
+    
+}
+
+#nav ul{
+    display: flex;
+    width: fit-content;
+    list-style-type: none;
+    
+}
+
+#nav ul a {
+    display: block;
+    margin: 0 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    animation: navAnimation 2s linear forwards;
+    text-decoration: none;
+    color:#ffffff;
+
+}
+
+#nav .logo{
+    font-weight: bold;
+    color: #6e6a6a;
+    padding-left: 1rem;
+    font-size: 2rem;
+    animation: navAnimation 2s linear forwards;
+}
+
+#nav .menu{
+    color: #6e6a6a;
+    text-transform: uppercase;
+    list-style: none;      
+}
+
+.mainContainer{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-image:linear-gradient(to top,rgba(0, 0, 0, 0.284), rgba(255, 255, 255, 0));
+}
+.leftContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10vh;
+    padding-left: 1rem;
+}
+.leftContent .name h1{
+    font-size: 6.5vw;
+    font-weight: 300;
+    transition: 0.3ms;
+    animation: textAnimation 1.5s ease-out forwards;
+}
+.leftContent .logo h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.2rem;
+    transition: 0.3ms;
+    animation: textAnimation 1s linear forwards;
+}
+
+.rightContent{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.rightContent a {
+    font-size: 1rem;
+    padding-right: 20%;
+}
+.rightContent .launchNow{
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 100px;
+    font-size: 1.5rem;
+    background-color: rgba(238, 238, 238, 0.632);
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    border: none;
+    transition: 0.5s;
+}
+
+.rightContent .lunchNow:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+@keyframes textAnimation {
+    to{
+        transform: translate(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+    from{
+        transform: translateY(30px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+    
+}
